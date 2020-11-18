@@ -6,12 +6,17 @@ time = datetime.datetime.now()
 hour = time.hour
 day = time.weekday()
 
-if(day>5): #haftasonu
-	if(hour >= 10):
-		if(hour < 20):
-			if(age > 20 and age < 65) | (hour <= 16):
-				print("maskeni tak, çık")
-				sys.exit()
+if(day>4): #haftasonu
+	if(hour >= 10 and hour < 20):
+		if(age > 20 and age < 65):
+			print("maskeni tak, çık")
+			sys.exit()
+		elif(age >= 65 and hour < 13):
+			print("maskeni tak, çık")
+			sys.exit()
+		elif(age <= 20 and hour >= 13 and hour < 16):
+			print("maskeni tak, çık")
+			sys.exit()
 							
 	print("otur evinde")
 
