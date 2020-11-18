@@ -24,5 +24,16 @@ else: #haftaiçi
 	job = input("Çalışıyor musunuz(y/n)?: ")
 	if job == "y":
 		print("git çalış")
-	else:
-		print("maskeni tak, çık")
+		sys.exit()
+	elif job == "n":
+		if(age > 20 and age < 65):
+			print("maskeni tak, çık")
+			sys.exit()
+		elif(age >= 65 and hour >= 10 and hour < 13):
+			print("maskeni tak, çık")
+			sys.exit()
+		elif(age <= 20 and hour >= 13 and hour < 16):
+			print("maskeni tak, çık")
+			sys.exit()
+
+	print("otur evinde")
